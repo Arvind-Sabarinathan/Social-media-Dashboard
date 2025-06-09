@@ -18,8 +18,8 @@
 .card {
     position: relative;
     overflow: hidden;
-    background: var(--dark-card);
-    color: var(--dark-text-1);
+    background: var(--card-bg);
+    color: var(--text-color-2);
     text-align: center;
     padding: rem(25);
     border-radius: rem(5);
@@ -27,7 +27,7 @@
     cursor: pointer;
 
     &:hover {
-        background: var(--dark-card-hover);
+        background: var(--card-hover);
     }
 
     &--facebook {
@@ -73,6 +73,7 @@
     &__subtitle {
         font-weight: 700;
         font-size: rem(14);
+        color: var(--text-color-2);
     }
 
     &__icon {
@@ -82,6 +83,7 @@
     &__username {
         font-size: rem(12);
         font-weight: 700;
+        color: var(--text-color-2);
     }
 
     &__followers {
@@ -89,7 +91,7 @@
     }
 
     &__count {
-        color: var(--dark-text-2);
+        color: var(--text-color);
         font-weight: 700;
         letter-spacing: rem(-2);
         line-height: 1;
@@ -106,7 +108,7 @@
 
     &__label {
         font-size: rem(12);
-        color: var(--dark-text-1);
+        color: var(--text-color-2);
         text-transform: uppercase;
         font-weight: 400;
         letter-spacing: rem(5);
