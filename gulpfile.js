@@ -24,6 +24,19 @@ function jsTask() {
         .pipe(dest('dist', { sourcemaps: '.' }));
 }
 
+// Copy html to dist/
+function htmlTask() {
+    return src('index.html')
+        .pipe(dest('dist'));
+}
+
+// copy images/ to dist/
+function imagesTask() {
+    return src('images/**/*')
+        .pipe(dest('dist/images'));
+}
+
+
 // Browsersync
 function browserSyncServe(cb) {
     browsersync.init({
@@ -58,4 +71,4 @@ exports.default = series(scssTask, jsTask, browserSyncServe, watchTask);
 
 
 // Deployment
-exports.build = series(scssTask, jsTask);
+exports.build = series(htmlTask, scssTask, jsTask, imagesTask);
