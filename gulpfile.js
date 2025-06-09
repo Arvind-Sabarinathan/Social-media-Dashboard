@@ -35,5 +35,11 @@ function imagesTask() {
         .pipe(dest('dist/images'));
 }
 
+function faviconTask() {
+    return src('icon.svg')
+        .pipe(dest('dist'));
+}
+
+
 // Build
-exports.build = series(htmlTask, scssTask, jsTask, imagesTask);
+exports.build = series(htmlTask, scssTask, jsTask, imagesTask, faviconTask);
